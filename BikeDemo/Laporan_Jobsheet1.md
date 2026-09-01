@@ -119,3 +119,179 @@ class tersebut!
 3. Salah satu kelebihannya adalah kode lebih mudah dikelola dan dikembangkan karena menggunakan konsep seperti inheritance dan encapsulation.
 4. Ya, boleh. Dua atribut dapat didefinisikan dalam satu baris, seperti public String nama, alamat;.
 5. Karena RoadBike merupakan turunan dari class Bike, sehingga atribut brand, speed, dan gear diwarisi dari class Bike dan tidak perlu ditulis ulang.
+
+**Tugas Praktikum**
+
+Foto Objek: 
+
+<img width="1200" height="1600" alt="WhatsApp Image 2026-09-01 at 21 01 22" src="https://github.com/user-attachments/assets/2718e82d-e523-4a9f-acbf-727335f90bd1" />
+
+<img width="1200" height="1600" alt="WhatsApp Image 2026-09-01 at 21 00 17 (1)" src="https://github.com/user-attachments/assets/23e7fdfa-fe03-4321-ae6f-9143ae7eba32" />
+
+<img width="1200" height="1600" alt="WhatsApp Image 2026-09-01 at 21 00 17" src="https://github.com/user-attachments/assets/0a25f0fb-0f27-445f-8969-2bc74e25f9b6" />
+
+<img width="1204" height="1600" alt="WhatsApp Image 2026-09-01 at 20 59 00" src="https://github.com/user-attachments/assets/7ae42ec7-937e-4092-9698-50511a812cb0" />
+
+**Code Program**
+```
+package BikeDemo;
+
+public class TugasDemo {
+    public static void main(String[] args) {
+        Tas tas1 = new Tas();
+        tas1.setMerk("Lenovo");
+        tas1.tambahBarang("Buku");
+        tas1.printInfo();
+        System.out.println();
+
+        Magicom magicom1 = new Magicom();
+        magicom1.setMerk("Miyako");
+        magicom1.masak();
+        magicom1.printInfo();
+        System.out.println();
+
+        Gadget gadget1 = new Gadget();
+        gadget1.setMerk("Gadget Umum");
+        gadget1.nyalakan();
+        gadget1.printInfo();
+        System.out.println();
+
+        Laptop laptop1 = new Laptop();
+        laptop1.setMerk("Lenovo");
+        laptop1.setSpek(8, "Windows 11");
+        laptop1.nyalakan();
+        laptop1.buka("VsCode");
+        laptop1.printInfo();
+        System.out.println();
+
+        Hp hp1 = new Hp();
+        hp1.setMerk("Infinix");
+        hp1.setSpek(50, 256);
+        hp1.nyalakan();
+        hp1.foto();
+        hp1.printInfo();
+    }
+}
+```
+```
+package BikeDemo;
+
+public class Tas {
+    private String merk;
+    private int kapasitas;
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void tambahBarang(String barang) {
+        System.out.println(barang + " dimasukkan ke tas.");
+    }
+
+    public void printInfo() {
+        System.out.println("Merk      : " + merk);
+        System.out.println("Kapasitas : " + kapasitas + " liter");
+    }
+}
+```
+
+```
+package BikeDemo;
+
+public class Magicom {
+    private String merk;
+    private boolean nyala;
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void masak() {
+        nyala = true;
+        System.out.println(merk + " sedang memasak nasi.");
+    }
+
+    public void printInfo() {
+        System.out.println("Merk   : " + merk);
+        System.out.println("Status : " + (nyala ? "Nyala" : "Mati"));
+    }
+}
+```
+
+```
+package BikeDemo;
+
+public class Gadget {
+    private String merk;
+    private boolean hidup;
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void nyalakan() {
+        hidup = true;
+        System.out.println(merk + " dinyalakan.");
+    }
+
+    public void printInfo() {
+        System.out.println("Merk    : " + merk);
+        System.out.println("Status : " + (hidup ? "Hidup" : "Mati"));
+    }
+}
+```
+
+```
+package BikeDemo;
+
+public class Hp extends Gadget {
+    private int kamera;
+    private int memori;
+
+    public void setSpek(int kamera, int memori) {
+        this.kamera = kamera;
+        this.memori = memori;
+    }
+
+    public void foto() {
+        System.out.println("Mengambil foto dengan kamera " + kamera + " MP.");
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("Kamera  : " + kamera + " MP");
+        System.out.println("Memori  : " + memori + " GB");
+    }
+}
+```
+```
+package BikeDemo;
+
+public class Laptop extends Gadget {
+    private int ram;
+    private String os;
+
+    public void setSpek(int ram, String os) {
+        this.ram = ram;
+        this.os = os;
+    }
+
+    public void buka(String aplikasi) {
+        System.out.println("Membuka " + aplikasi + " di laptop.");
+    }
+
+    @Override
+    public void printInfo() {
+        super.printInfo();
+        System.out.println("RAM : " + ram + " GB");
+        System.out.println("OS  : " + os);
+    }
+}
+```
+**Output Program**
+
+<img width="376" height="480" alt="image" src="https://github.com/user-attachments/assets/06f194d1-c931-4467-8761-b1bfcc43a490" />
+
+
+
