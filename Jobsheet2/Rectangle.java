@@ -1,6 +1,6 @@
 package Jobsheet2;
 
 public class Rectangle {
-    int widith;
+    int width;
     int height;
 }
