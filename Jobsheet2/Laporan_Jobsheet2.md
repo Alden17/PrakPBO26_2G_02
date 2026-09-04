@@ -160,3 +160,74 @@ Uji null
 Setelah menghapus uji null
 
 <img width="374" height="81" alt="image" src="https://github.com/user-attachments/assets/ddc25834-da37-4e85-a454-52a6b5f5a1fd" />
+
+**Langkah 6**
+
+Code Program
+```
+package Jobsheet2;
+
+public class Student {
+    private String name;
+    private String studentId;
+    private double gpa;
+
+    Student(String name, String studentId, double gpa){
+        this.name = name;
+        this.studentId = studentId;
+        this.gpa = gpa;
+    }
+
+    public String describe(){
+        return name + " (" + studentId + ", GPA: " + gpa + ")";
+    }
+}
+```
+```
+package Jobsheet2;
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle original  = new Rectangle(6, 4);
+
+        System.out.println("Area: " + original.area());
+
+        Rectangle copy = original;
+        copy.width = 10;
+        System.out.println("Via original: " + original.area());
+        System.out.println("Via copy: " + copy.area());
+
+        Student s = new Student("Nadia", "S001", 3.8 );
+        System.out.println(s.describe());
+    }
+}
+```
+Output Program
+
+<img width="359" height="104" alt="image" src="https://github.com/user-attachments/assets/6f3b3f32-a95d-4561-9423-4a602812079b" />
+
+**Langkah 7**
+
+Code Program
+```
+package Jobsheet2;
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle[] shapes = new Rectangle[3];
+        shapes[0] = new Rectangle(6, 4);
+        shapes[1] = new Rectangle(3, 3);
+        shapes[2] = new Rectangle(8, 2);
+
+        for (Rectangle r : shapes) {
+            System.out.println("Area: " + r.area() + ", Perimeter: " + r.perimeter() );
+        }
+
+        Student s = new Student("Nadia", "S001", 3.8 );
+        System.out.println(s.describe());
+    }
+}
+```
+Output Program
+
+<img width="371" height="100" alt="image" src="https://github.com/user-attachments/assets/aee395ec-dfd9-46d7-b051-dc9cb418c3b1" />
