@@ -1,0 +1,11 @@
+package Jobsheet2;
+
+public class Main {
+    public static void main(String[] args) {
+        Rectangle r = new Rectangle();
+        r.widith = 6;
+        r.height = 4;
+
+        System.out.println("Rectangle " + r.widith + "x" + r.height);
+    }
+}
