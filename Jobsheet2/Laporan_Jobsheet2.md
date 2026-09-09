@@ -231,3 +231,46 @@ public class Main {
 Output Program
 
 <img width="371" height="100" alt="image" src="https://github.com/user-attachments/assets/aee395ec-dfd9-46d7-b051-dc9cb418c3b1" />
+
+**Tugas Mandiri**
+Code program
+   ```
+   package Jobsheet2;
+public class Main {
+    public static void main(String[] args) {    
+        Circle c = new Circle (5);
+        int radius = 5;
+        System.out.println("Radius: " + radius);
+        System.out.println("Area: " + c.area());
+        System.out.println("Keliling: " + c.circumference());
+    }
+}
+```
+```
+package Jobsheet2;
+
+public class Circle {
+    private double radius;
+
+    Circle (double radius) {
+        this.radius = radius;
+    }
+
+    public double area () {
+        return  Math.PI * radius * radius;
+    }
+
+    public double circumference () {
+        return  2 * Math.PI * radius;
+    }
+
+
+}
+```
+   Output Program
+
+   <img width="347" height="78" alt="image" src="https://github.com/user-attachments/assets/5317cab5-be3c-44da-a71f-c706d5fc00da" />
+
+2. a) Objek adalah sesuatu yang dibuat berdasarkan sebuah class dan bisa memiliki data serta fungsi. Sedangkan referensi ke objek adalah variabel yang digunakan untuk menunjuk atau mengakses objek tersebut.
+
+    b) Konstruktor dijalankan saat objek dibuat, yaitu ketika kita menggunakan new. Jadi, konstruktor otomatis dipanggil untuk mengisi atau mengatur kondisi awal objek.
