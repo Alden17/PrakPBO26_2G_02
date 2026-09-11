@@ -408,3 +408,45 @@ public class TestLogistik {
 
 
 <img width="467" height="176" alt="image" src="https://github.com/user-attachments/assets/1f24a934-f38d-406d-95f8-05dbfc46303b" />
+
+
+7. Membuat Kelas tiket untuk membantu mengelola data secara aman
+```
+package Jobsheet3;
+
+public class Tiket {
+    private String judulFilm;
+    private double hargaDasar;
+    private boolean statusPembayaran;
+
+    public Tiket(String judulFilm, double hargaDasar) {
+        this.judulFilm = judulFilm;
+
+        if (hargaDasar < 0) {
+            this.hargaDasar = 35000;
+        } else {
+            this.hargaDasar = hargaDasar;
+        }
+
+        this.statusPembayaran = false;
+    }
+
+    public String getJudulFilm() {
+        return judulFilm;
+    }
+
+    public double getHargaDasar() {
+        return hargaDasar;
+    }
+
+    public boolean isStatusPembayaran() {
+        return statusPembayaran;
+    }
+
+    public void lakukanPembayaran() {
+        statusPembayaran = true;
+    }
+}
+```
+
+<img width="339" height="138" alt="image" src="https://github.com/user-attachments/assets/ec408b7a-53ed-46f7-b2da-57e8ad779c03" />
