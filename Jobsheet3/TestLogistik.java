@@ -1,26 +1,29 @@
 package Jobsheet3;
+import java.util.Scanner;
 
 public class TestLogistik {
     public static void main(String[] args) {
+        Scanner alden = new Scanner(System.in);
+
         Kontainer kontainerAlfa = new Kontainer("REQ-9988", "PT. Maju Bersama", 5000);
 
         System.out.println("Nama Pemilik Kontainer: " + kontainerAlfa.getNamaPemilik());
-        System.out.println("Kapasitas Maksimal: " + kontainerAlfa.getKapasitasMaksimal() + "kg");
+        System.out.println("Kapasitas Maksimal: " + kontainerAlfa.getKapasitasMaksimal() + " kg");
 
-        System.out.println("\nMemasukkan muatan baru seberat 6.000 kg ... ");
-        kontainerAlfa.tambahMuatan(6000);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+        System.out.print("\nMasukkan berat muatan yang ingin ditambahkan: ");
+        double tambah = alden.nextDouble();
 
-        System.out.println("\nMemasukkan muatan baru seberat 4.000 kg ... ");
-        kontainerAlfa.tambahMuatan(4000);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+        kontainerAlfa.tambahMuatan(tambah);
 
-        System.out.println("\nMembongkar muat/menurunkan barang seberat 500 kg ... ");
-        kontainerAlfa.turunkanMuatan(500);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+        System.out.println("Berat muatan saat ini: " 
+                + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
 
-        System.out.println("\nMembongkar muat/menurunkan barang seberat 2.000 kg ... ");
-        kontainerAlfa.turunkanMuatan(2000);
-        System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+        System.out.print("\nMasukkan berat muatan yang ingin diturunkan: ");
+        double turun = alden.nextDouble();
+
+        kontainerAlfa.turunkanMuatan(turun);
+
+        System.out.println("Berat muatan saat ini: " 
+                + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
     }
 }
