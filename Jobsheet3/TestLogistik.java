@@ -19,8 +19,8 @@ public class TestLogistik {
         kontainerAlfa.turunkanMuatan(500);
         System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
 
-        System.out.println("\nMembongkar muat/menurunkan barang seberat 1.500 kg ... ");
-        kontainerAlfa.turunkanMuatan(1500);
+        System.out.println("\nMembongkar muat/menurunkan barang seberat 2.000 kg ... ");
+        kontainerAlfa.turunkanMuatan(2000);
         System.out.println("Berat muatan saat ini: " + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
     }
 }
