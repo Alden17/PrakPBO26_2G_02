@@ -14,6 +14,4 @@ public class Circle {
     public double circumference () {
         return  2 * Math.PI * radius;
     }
-
-
 }
