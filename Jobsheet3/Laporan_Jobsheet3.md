@@ -280,4 +280,131 @@ public class KoperasiDemo {
 7. Saat objek membutuhkan nilai tertentu ketika pertama kali dibuat
 8. Inisialisasi adalah memberikan nilai pada atribut, sedangkan instansiasi adalah membuat objek dari class
 9. Method dibuat di dalam class, sedangkan method tidak perlu diinstansiasi dan cukup dipanggil saat dibutuhkan
-10. 
+
+## Tugas
+1. <img width="363" height="65" alt="image" src="https://github.com/user-attachments/assets/15045b8d-9ddd-48c1-81c2-eae393967c13" />
+
+
+2. karena ada method steAge yang akan mengubah umur menjadi 30 jika angka yg diinputkan lebih dari 30
+3. Mengubah batas minimal dan maksimal umur
+```
+public void setAge(int newAge){
+        if (newAge > 30) {
+            age = 30;
+        }else if (newAge < 18) {
+            age = 18;
+        }else {
+            age = newAge;
+        }
+    }
+```
+4. Membuat sistem penyimpanan
+
+Code 
+```
+package Jobsheet3;
+
+public class Kontainer {
+    private String nomorResi;
+    private  String namaPemilik;
+    private double kapasitasMaksimal;
+    private double beratMuatanSaatIni;
+
+    Kontainer (String nomorResi, String namaPemilik, double kapasitasMaksimal){
+        this.nomorResi = nomorResi;
+        this.namaPemilik = namaPemilik;
+        this.kapasitasMaksimal = kapasitasMaksimal;
+        beratMuatanSaatIni = 0;
+    }
+
+    public String getNomorResi(){
+        return nomorResi;
+    }
+
+    public String getNamaPemilik(){
+        return namaPemilik;
+    }
+
+    public double getKapasitasMaksimal(){
+        return kapasitasMaksimal;
+    }
+
+    public double getBeratMuatanSaatIni() {
+        return beratMuatanSaatIni;
+    }
+
+    public void tambahMuatan(double berat) {
+        if (beratMuatanSaatIni + berat <= kapasitasMaksimal) {
+            beratMuatanSaatIni += berat;
+        } else {
+            System.out.println("Maaf, berat muatan melebihi kapasitas maksimal kontainer.");
+        }
+    }
+
+    public void turunkanMuatan(double berat) {
+        if (berat <= beratMuatanSaatIni) {
+            beratMuatanSaatIni -= berat;
+        } else {
+            System.out.println("Maaf, berat muatan yang diturunkan melebihi muatan saat ini.");
+        }
+    }
+}
+```
+
+   <img width="476" height="308" alt="image" src="https://github.com/user-attachments/assets/d3f1f5c2-8357-4f10-bcd1-5d62b6c654fd" />
+
+5. Modifikasi menurunkan maksimal 50% dari total muatan
+
+Code
+```
+public void turunkanMuatan(double berat) {
+        if (berat > beratMuatanSaatIni * 0.5) {
+            System.out.println("Maaf, demi keselamatan, pembongkaran muatan satu kali jalan tidak boleh melebihi 50% dari muatan saat ini!");
+        } else if (berat <= beratMuatanSaatIni) {
+            beratMuatanSaatIni -= berat;
+        } else {
+            System.out.println("Maaf, berat muatan yang diturunkan melebihi muatan saat ini.");
+        }
+    }
+```
+
+
+<img width="904" height="310" alt="image" src="https://github.com/user-attachments/assets/fd816c25-7e33-41d8-991c-8690617310cc" />
+
+6.Modifikasi agar user bisa input melalui terminal
+
+Code
+```
+package Jobsheet3;
+import java.util.Scanner;
+
+public class TestLogistik {
+    public static void main(String[] args) {
+        Scanner alden = new Scanner(System.in);
+
+        Kontainer kontainerAlfa = new Kontainer("REQ-9988", "PT. Maju Bersama", 5000);
+
+        System.out.println("Nama Pemilik Kontainer: " + kontainerAlfa.getNamaPemilik());
+        System.out.println("Kapasitas Maksimal: " + kontainerAlfa.getKapasitasMaksimal() + " kg");
+
+        System.out.print("\nMasukkan berat muatan yang ingin ditambahkan: ");
+        double tambah = alden.nextDouble();
+
+        kontainerAlfa.tambahMuatan(tambah);
+
+        System.out.println("Berat muatan saat ini: " 
+                + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+
+        System.out.print("\nMasukkan berat muatan yang ingin diturunkan: ");
+        double turun = alden.nextDouble();
+
+        kontainerAlfa.turunkanMuatan(turun);
+
+        System.out.println("Berat muatan saat ini: " 
+                + kontainerAlfa.getBeratMuatanSaatIni() + " kg");
+    }
+}
+```
+
+
+<img width="467" height="176" alt="image" src="https://github.com/user-attachments/assets/1f24a934-f38d-406d-95f8-05dbfc46303b" />
