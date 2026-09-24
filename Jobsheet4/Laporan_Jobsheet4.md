@@ -104,10 +104,18 @@ Main Pertanyaan
 
 ## Tugas Mandiri
 
+1. - Agregation : Pustakawan diberikan dari luar saat membuat objek Perpustakaan, jadi masih bisa ada tanpa perpustakaan <img width="362" height="28" alt="image" src="https://github.com/user-attachments/assets/27833f7b-065e-40bb-9da7-46864f8749b9" />
+
+   - Composition : Rak membuat dan mengisi objek Buku sendiri melalui new Buku(...), sehingga buku menjadi bagian dari rak <img width="256" height="23" alt="image" src="https://github.com/user-attachments/assets/b19c55cf-e6b2-44f6-acb3-c470340a4fdf" />
+
+   - Dependency : Printer hanya digunakan sementara sebagai parameter pada method cetakLaporan(Printer printer), bukan sebagai atribut Perpustakaan <img width="421" height="23" alt="image" src="https://github.com/user-attachments/assets/826ecb60-fedc-4be0-a6f9-24b36a7a068d" />
+
+
+
+2. Kita menentukan jenis relasi dengan melihat apakah suatu class memiliki, membuat, atau hanya menggunakan class lain. Jika objek masih bisa berdiri sendiri gunakan Aggregation, jika bergantung pada objek utama gunakan Composition, dan jika hanya digunakan sementara gunakan Dependency. Pertanyaan kuncinya adalah: “Apakah objek ini tetap ada tanpa objek utama, dibuat oleh siapa, dan apakah hanya digunakan sementara?
+
 **Output**
 
-
-
-
+<img width="396" height="300" alt="image" src="https://github.com/user-attachments/assets/7d5708c4-ce22-40fa-acfa-9af54c567308" />
 
 
