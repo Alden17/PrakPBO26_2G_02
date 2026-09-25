@@ -1,4 +1,4 @@
-package Jobsheet4;
+package Jobsheet4.Percobaan6;
 
 public class Printer {
     private String merk;

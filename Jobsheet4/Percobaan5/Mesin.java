@@ -1,4 +1,4 @@
-package Jobsheet4;
+package Jobsheet4.Percobaan5;
 
 public class Mesin {
     

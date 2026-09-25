@@ -1,4 +1,4 @@
-package Jobsheet4;
+package Jobsheet4.Percobaan6;
 
 public class Laptopp6 {
     private String merk;
