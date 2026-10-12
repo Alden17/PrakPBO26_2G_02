@@ -18,4 +18,10 @@ public class Tabung extends Bangun {
     public void volume() {
         System.out.println("Volume Tabung: " + (super.phi * super.r * super.r * t));
     }
+
+    public void cekR() {
+    System.out.println("r       = " + r);
+    System.out.println("this.r = " + this.r);
+    System.out.println("super.r = " + super.r);
+}
 }
