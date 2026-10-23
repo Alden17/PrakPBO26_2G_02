@@ -9,5 +9,6 @@ public class MainPercobaan3 {
 
         Kucing b = new Kucing("Garfield", 5);
         b.info();
+
     }
 }
