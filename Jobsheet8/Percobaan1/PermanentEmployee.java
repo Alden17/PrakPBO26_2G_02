@@ -1,4 +1,4 @@
-package Jobsheet9.Percobaan1;
+package Jobsheet8.Percobaan1;
 
 public class PermanentEmployee extends Employee implements Payable {
     private int salary;
